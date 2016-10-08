@@ -1,0 +1,224 @@
+<!--.....................modal section..........................................-->
+      <!-- Modal -->
+      <div class="modal fade" id="add_client_modal" role="dialog">
+         <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4  class="panel-title">Add Client</h4>
+               </div>
+               <div class="modal-body">
+                  <div class="row centered-form">
+                     <div class="col-md-12">
+                        <div class="panel panel-default">
+                           <!--                            <div class="panel-heading">
+                              <h3 class="panel-title">Add Client</h3>
+                              </div>-->
+                           <div class="panel-body">
+                              <ul class="error-box" id="client_error_footer">
+                              </ul>
+                              <form id="add_client_form" action="#" method="#">
+                                 <div class="row">
+                                    <div class=" col-md-6">
+                                       <div class="form-group">
+                                          <p>Industry</p>
+                                          <select name="indusrty" data-live-search="true" class="selectpicker show-menu-arrow form-control ">
+                                             <option value= '' selected>Select Industry</option>
+                                             <?php print_r(get_industry()); ?>
+                                          </select>
+                                       </div>
+                                    </div>
+                                    <div class=" col-md-6">
+                                       <div class="form-group">
+                                          <p>Client</p>
+                                          <input type="text" name="client" class="form-control input-sm" placeholder="Enter client name">
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class=" col-md-6">
+                                       <div class="form-group">
+                                          <p style="margin-bottom: 3px">E-Mail</p>
+                                          <input name="email" type="email" class="form-control input-sm" placeholder="Enter E-Mail">
+                                       </div>
+                                    </div>
+                                    <div class=" col-md-6">
+                                       <div class="form-group">
+                                          <p style="margin-bottom: 3px">Contact Num</p>
+                                          <input name="number" type="text" class="form-control input-sm" placeholder="Enter Contact No">
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class=" col-md-6">
+                                       <div class="form-group">
+                                          <p style="margin-bottom: 3px">State</p>
+                                          <select name="client_state" onchange="get_city(this.value,'client_city')" data-live-search="true" class="selectpicker show-menu-arrow form-control">
+                                             <option value="" selected>Select State</option>
+                                             <?php print_r(get_state()); ?>
+                                          </select>
+                                       </div>
+                                    </div>
+                                    <div class=" col-md-6">
+                                       <div class="form-group">
+                                          <p style="margin-bottom: 3px">City</p>
+                                          <select id="client_city" name="client_city" class="form-control input-sm">
+                                             <option value="">Select City</option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class=" col-md-6">
+                                       <div class="form-group">
+                                          <p style="margin-bottom: 3px">Address</p>
+                                          <textarea name="client_address" class="form-control input-sm" placeholder="Enter Address"></textarea>
+                                       </div>
+                                    </div>
+                                    <div class=" col-md-6">
+                                       <div class="form-group">
+                                          <p style="margin-bottom: 3px">Package Period</p>
+                                          <select name="package" class="form-control input-sm">
+                                             <option value="">Select Period</option>
+                                             <option value="3">Free Trial</option>
+                                             <option value="30">One Month</option>
+                                             <option value="60">Two Month</option>
+                                             <option value="90">Three Month</option>
+                                             <option value="120">Four Month</option>
+                                             <option value="150">Five Month</option>
+                                             <option value="180">Six Month</option>
+                                             <option value="210">Seven Month</option>
+                                             <option value="240">Eight Month</option>
+                                             <option value="270">Nine Month</option>
+                                             <option value="300">Ten Month</option>
+                                             <option value="330">Eleven Month</option>
+                                             <option value="360">Twelve Month</option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <br>
+                                 <input id="add_client_submit" type="submit" value="Submit" class="btn btn-info btn-block">
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="add_user_modal" role="dialog">
+         <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Add User</h4>
+               </div>
+               <div class="modal-body">
+                  <ul class="error-box" id="user_error_footer">
+                  </ul>
+                  <div class="row centered-form">
+                     <div class="col-md-12">
+                        <div class="panel panel-default">
+                           <!--                            <div class="panel-heading">
+                              <h3 class="panel-title">Add User</h3>
+                              </div>-->
+                           <div class="panel-body">
+                              <form id="add_user_form" action="#" method="#">
+                                 <div class="row">
+                                    <div class=" col-md-6">
+                                       <div class="form-group">
+                                          <p style="margin-bottom: 3px">Username</p>
+                                          <input name="username" type="text" class="form-control input-sm" placeholder="Enter Userame">
+                                       </div>
+                                    </div>
+                                    <div class=" col-md-6">
+                                       <div class="form-group">
+                                          <p style="margin-bottom: 3px">Email</p>
+                                          <input type="email" name="email" class="form-control input-sm" placeholder="Enter E-Mail">
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class=" col-md-6">
+                                       <div class="form-group">
+                                          <p style="margin-bottom: 3px">Gender</p>
+                                          <select name="user_gender" class="form-control input-sm">
+                                             <option value="M">Male</option>
+                                             <option value="F">Female</option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                    <div class=" col-md-6">
+                                       <div class="form-group">
+                                          <p style="margin-bottom: 3px">Date of Birth</p>
+                                          <input id="user_dob" name="dob" class="form-control input-sm" placeholder="Select Date Of BIrth">
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class=" col-md-6">
+                                       <div class="form-group">
+                                          <p style="margin-bottom: 3px">Contact No</p>
+                                          <input name="user_contact" type="text" class="form-control input-sm" placeholder="Enter Contact Number">
+                                       </div>
+                                    </div>
+                                    <div class=" col-md-6">
+                                       <div class="form-group">
+                                          <p style="margin-bottom: 3px">State</p>
+                                          <select name="user_state" onchange="get_city(this.value,'user_city')" data-live-search="true" class="selectpicker show-menu-arrow form-control">
+                                             <option value="">Select State</option>
+                                             <?php print_r(get_state()); ?>
+                                          </select>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class=" col-md-6">
+                                       <div class="form-group">
+                                          <p style="margin-bottom: 3px">City</p>
+                                          <select id="user_city" name="user_city" class="form-control input-sm">
+                                             <option value="">Select City</option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                    <div class=" col-md-6">
+                                       <div class="form-group">
+                                          <p style="margin-bottom: 3px">Address</p>
+                                          <textarea name="user_address" class="form-control input-sm" placeholder="Enter Address"></textarea>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class=" col-md-6">
+                                       <div class="form-group">
+                                          <p style="margin-bottom: 3px">User Type</p>
+                                          <select name="user_type" class="form-control input-sm">
+                                             <option value="">Select Type</option>
+                                             <option value="admin">ADMIN</option>
+                                             <option value="user">USER</option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <br>
+                                 <input id="add_user_submit" type="submit" value="Submit" class="btn btn-info btn-block">
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+               </div>
+            </div>
+         </div>
+      </div>

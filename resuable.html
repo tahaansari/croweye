@@ -1,0 +1,79 @@
+<div id="cust_modal" class="modal-demo">       
+        <div class="text">
+
+            <!-- <img src="images/trial.png" style="width:50%"> -->
+        
+        <form accept-charset="utf-8" action="#" class="simform" id="trial_form">
+                <button type="button" class="close" onclick="Custombox.close();">
+                <span>&times;</span>
+            </button>
+                <div class="sminputs">
+                    <div class="input full">
+                        <label class="string optional" for="user-name">Industry</label>
+                        <input class="string optional" name="industry" placeholder="Industry" type="text">
+
+                        <!-- <select name="industry" data-live-search="true" class="selectpicker show-menu-arrow form-control ">
+                        <option value="">Select Industry</option>
+                            <?php # print_r(get_industry()); ?>
+                        </select> -->
+
+
+                    </div>
+                </div>
+                <div class="sminputs">
+                    <div class="input full">
+                        <label class="string optional" for="user-pw">Company Name</label>
+                        <input class="string optional" name="company_name" placeholder="Company Name" type="text"> 
+                        <!-- <span class="hide-password">Show</span> -->
+                    </div>
+                </div>
+
+                <div class="sminputs">
+                    <div class="input full">
+                        <label class="string optional" for="user-pw">Email</label>
+                        <input class="string optional" name="email" placeholder="Email" type="email"> 
+                        <!-- <span class="hide-password">Show</span> -->
+                    </div>
+                </div>
+
+                
+                <div class="sminputs">
+                    <div class="input full">
+                        <label class="string optional" for="user-pw">Contact No</label>
+                        <input class="string optional" name="contact_no" placeholder="Contact No" type="text"> 
+                        <!-- <span class="hide-password">Show</span> -->
+                    </div>
+                </div>
+
+                <ul class="error-box" id="trial_error_footer">
+                    <!-- <li>Failed</li> -->
+                </ul>
+                <div class="simform__actions">
+                    <button class="sumbit" id="trial_submit">Submit</button> 
+                    <!-- <a href="index.php"><input class="sumbit" name="commit" type="sumbit" value="Cancel"> </a> -->
+                     
+                    <!--  <span class="simform__actions-sidetext">
+                    <a class="special" href="#" role="link">Forgot your password?
+                    </a>
+                 </span> -->
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    
+      <script src="assets/js/custombox.js" type="text/javascript">
+      </script> 
+
+      <script>
+          $(function() {
+              $('#clickme').on('click', function( e ) {
+                  Custombox.open({
+                      target: '#cust_modal',
+                      effect: 'fadein'
+                  });
+                  e.preventDefault();
+              });
+          });
+      </script>
