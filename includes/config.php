@@ -1,13 +1,17 @@
 <?php
 
-// ]	local
+	//local
 	define("host","localhost");
 	define("username","root");
 	define("password","root");
 	define("database","croweye");
 
-
 	// server
+	// bluehost ip
+	// 103.21.58.244
+	// 103.204.120.130
+
+
 	// define("host","localhost");
 	// define("username","crowefsy_admin");
 	// define("password","admin@admin");
@@ -24,8 +28,9 @@
 
 	}else{
 
-		echo "cannot connect to server";
+		echo "hello cannot connect to server".mysqli_connect_error();
 		exit();
+
 	}
 
 ?>
